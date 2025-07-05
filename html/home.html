@@ -1,0 +1,2036 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- css -->
+      <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+      <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfume Landing Page</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: url(../images/12fac48c6538ab6d7d8141a165d9e6b51676f545.png);
+  color: #123c24;
+  width: 100%;
+  height: 80vh;
+background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  font-size: 26px;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  color: #1e1e1e;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-box.active {
+  display: inline-block;
+  animation: fadeIn 0.3s ease;
+}
+
+.shop-btn {
+  background: linear-gradient(#032E15,#016630);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background-color: #00733c;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 60px 40px;
+  flex-wrap: wrap;
+  min-height: 85vh;
+}
+
+.hero-text {
+  max-width: 50%;
+  line-height: 13px;
+}
+
+.badge {
+  background:linear-gradient(#032e1585,#01663079);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 200;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+
+  color: #2f5e3c;
+}
+
+.stats span {
+  font-size: 50px;
+  font-weight: bold;
+  display: block;
+  color: #235b39;
+}
+
+.hero-image img {
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: none;
+  }
+
+  .nav-menu.active .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/**/
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0fdf4; /* light green background */
+  padding: 20px 0;
+  flex-wrap: wrap;
+  border: 1px solid #cceedd;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #003314;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.feature-item i {
+  font-size: 20px;
+  color: #003314;
+}
+/*circle*/
+
+
+.ingredients-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.ingredients-text {
+  max-width: 500px;
+}
+
+.subheading {
+  color: #888;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.ingredients-text h2 {
+  font-size: 28px;
+  color: #002e18;
+  margin-bottom: 15px;
+}
+
+.ingredients-text p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.fragrance-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #004d25;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ingredients-visual {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circle {
+    background: url(../images/a524622b96338afaf167ca29c225b0ee2a1f72c3.png);
+    background-size: cover;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.bottle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  z-index: 2;
+}
+
+.ingredient {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: rotate(calc(var(--i) * 40deg)) translate(180px) rotate(calc(var(--i) * -40deg));
+  text-align: center;
+  width: 70px;
+}
+
+.ingredient img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.ingredient span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #004d25;
+}
+
+@media (max-width: 768px) {
+  .ingredients-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .ingredients-visual {
+    width: 300px;
+    height: 300px;
+  }
+
+  .ingredient {
+    width: 60px;
+  }
+
+  .ingredient img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/*next*/
+
+
+   .product-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            gap: 40px;
+        }
+
+        .product-gallery {
+            flex: 1;
+        }
+
+        .main-image {
+            position: relative;
+            margin-bottom: 20px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .carousel-controls button {
+            background: rgba(255,255,255,0.7);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .thumbnails img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .thumbnails img:hover, 
+        .thumbnails img.active-thumbnail {
+            border-color: #004d25;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h2 {
+            font-size: 28px;
+            color: #002e18;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #ffb300;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .stars span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .description {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .plan-header {
+            background-color: #004d25;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px 5px 0 0;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .plan-box {
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 0 5px 5px;
+            background: white;
+        }
+
+        .radio-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .radio-option input {
+            margin-right: 10px;
+        }
+
+        .price {
+            color: #004d25;
+            font-size: 18px;
+        }
+
+        .price del {
+            color: #999;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .fragrance-options {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .fragrance-options p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .fragrance-options label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .fragrance-options img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .delivery-options {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .delivery-options p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .delivery-box {
+            display: flex;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .every, .once {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .every {
+            background: #f5f5f5;
+        }
+
+        .every img {
+            width: 40px;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .once span {
+            color: #004d25;
+            font-weight: bold;
+        }
+
+        .once img {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+        }
+
+        .perks {
+            list-style: none;
+        }
+
+        .perks li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .perks li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 15px;
+            background-color: #004d25;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #003618;
+        }
+
+        /* Active state for selected plan */
+        .plan-box.active {
+            border-color: #004d25;
+            box-shadow: 0 0 0 1px #004d25;
+        }
+
+        .plan-box.active .fragrance-options,
+        .plan-box.active .delivery-options {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .main-image {
+                height: 300px;
+            }
+
+            .thumbnails {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .ultimate{
+            background: linear-gradient(45deg,#016630,#032E15);
+        width:100%;
+        height: 850px;
+            padding-top: 64px;
+            padding-right: 65px;
+            padding-left: 65px;
+            padding-bottom: 64px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .sectione{
+            margin: 40px;
+            padding: 10px;
+            background: linear-gradient(rgba(0, 0, 0, 0.39),rgba(0, 0, 0, 0.379)),url(../images/two.jpg);
+
+            height:80vh;
+
+            background-size:cover;
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        /*jjjj*/
+        .oo{
+           display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px;
+        }
+
+         .collection-container {
+      width: 48%;
+        padding: 40px;
+     
+    }
+
+    h2 {
+      color: #083b0b;
+      font-size: 32px;
+    }
+
+    .accordion {
+
+      border-radius: 6px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-header {
+      padding: 16px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      color: #003300;
+    }
+
+    .accordion-header:hover {
+      background-color: #f9f9f9;
+    }
+
+    .accordion-content {
+      padding: 15px 20px;
+      font-size: 14px;
+      color: #555;
+      display: none;
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+
+    .accordion-icon {
+      font-size: 22px;
+      transition: transform 0.2s ease;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .image-slider {
+      width: 48%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .image-slider img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    }
+      .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Makes the dot circular */
+    background-color: #555; /* Default color */
+    opacity: 0.5;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+  }
+.percentage-section {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, #004d26, #008040);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.percentage-box h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* count*/
+.comparison-section {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: "Helvetica", sans-serif;
+  background-color: #ffffff;
+}
+
+.comparison-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #003b1f;
+}
+
+.comparison-section h2 span {
+  color: #004d26;
+}
+
+.comparison-table {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.comparison-table th img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.highlight {
+  background-color: #f0fdf4;
+  font-weight: 600;
+}
+
+.tick,
+.cross {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #666;
+  width: 24px;
+  height: 24px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.tick {
+  color: #007b3e;
+  border-color: #007b3e;
+}
+
+.cross {
+  color: #555;
+}
+
+.cta-button {
+  margin-top: 40px;
+}
+
+.cta-button button {
+  background-color: #004d26;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button button:hover {
+  background-color: #007a3d;
+}
+/*sectionv*/
+.play-container img {
+
+  width: 100%;
+  height: 90vh;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+}
+.play-container {
+  position: relative;
+
+}
+ .accordion-button::after {
+ 
+    font-size: 1.5rem;
+    transform: none;
+  }
+
+  .accordion-button.collapsed::after {
+  
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    content: '−'; /* minus symbol */
+  }
+
+  .accordion-button {
+    background-color: white;
+    color: #003b2e;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .faq-button {
+    background-color: #004d26;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .faq-button:hover {
+    background-color: #003b1f;
+  }
+
+  .see-all-link {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: 500;
+    display: block;
+    color: #003b2e;
+    text-decoration: none;
+  }
+
+  .see-all-link:hover {
+    text-decoration: underline;
+  }
+
+
+  /*last second*/
+    .subscribe-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.39),rgba(0, 0, 0, 0.532)),url('../images/12fac48c6538ab6d7d8141a165d9e6b51676f545.png'); /* 🔁 Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    border-radius: 20px;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .subscribe-section h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  .subscribe-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    outline: none;
+    margin-bottom: 15px;
+  }
+
+  .subscribe-form input::placeholder {
+    color: #ccc;
+  }
+
+  .subscribe-form button {
+    background-color: white;
+    color: #004d26;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+  }
+
+  .subscribe-form button:hover {
+    background-color: #e6e6e6;
+  }
+
+  /*footer*/
+   .footer {
+    background-color: #002d17;
+    color: #fff;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .footer a {
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer h5 {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .footer .form-control {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 0;
+  }
+
+  .footer .form-control::placeholder {
+    color: #ccc;
+  }
+
+  .footer .btn-subscribe {
+    background-color: #4e2b00;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 0;
+    font-weight: 600;
+  }
+
+  .footer .btn-subscribe:hover {
+    background-color: #3a1f00;
+  }
+
+  .footer .social i {
+    margin-right: 10px;
+  }
+
+  .footer small {
+    color: #aaa;
+    font-size: 13px;
+  }
+
+  .footer .logo {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  sub{
+
+  }
+
+</style>
+<body>
+ <header class="navbar">
+    <div class="logo">GTG</div>
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-links">
+        <li style="font-size: 14px;">Home</li>
+        <li style="font-size: 14px;">Shop</li>
+        <li  style="font-size: 14px;">Fragrances</li>
+        <li style="font-size: 14px;">About Us</li>
+        <li style="font-size: 14px;">Blog</li>
+        <li style="font-size: 14px;">Contact</li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <span class="search-icon" id="searchToggle">🔍</span>
+      <input type="text" id="searchBox" placeholder="Search..." class="search-box" />
+      <button class="shop-btn" style="font-size: 14px;">Shop Now</button>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="badge"><i class="fa fa-award"></i>&emsp;Awarded the best perfume in the world</p>
+      <h1>Live  your best life.</h1>
+      <div class="stats">
+        <div><span>10x</span><br/><br><small>Power</small></div>
+        <div><span>9</span><br/><br><small>Ingredients</small></div>
+        <div><span>20K+</span><br/><br><small>happy customers</small></div>
+      </div>
+      <button class="shop-btn" style="font-size: 14px;">Shop Now</button>
+    </div>
+  </section>
+  <!-- Features -->
+  <section class="features">
+  <div class="feature-item">
+    <i class="fa-solid fa-heart" ></i>
+    <span>30-day Guarantee</span>
+  </div>
+  <div class="feature-item">
+    <i class="fas fa-globe"></i>
+    <span>Worldwide Shipping</span>
+  </div>
+  <div class="feature-item">
+    <i class="fas fa-shipping-fast"></i>
+    <span>Fast Delivery</span>
+  </div>
+  <div class="feature-item">
+    <i class="fas fa-leaf"></i>
+    <span>Eco Certified</span>
+  </div>
+</section>
+<!-- circle -->
+<section class="ingredients-section">
+  <!-- Left Text -->
+  <div class="ingredients-text">
+    <p class="subheading">9 POWERFUL SCENTS</p>
+    <h2>All of the Best Ingredients,<br/>None of the Compromise</h2>
+    <p>
+      GTG delivers <strong>10x longer-lasting fragrance</strong> with our
+      advanced concentration formula – engineered for all-day projection and exceptional sillage.
+    </p>
+    <button class="fragrance-btn">View All Fragrances</button>
+  </div>
+
+  <!-- Right Visual -->
+  <div class="ingredients-visual">
+    <div class="circle">
+      <!-- Center Bottle -->
+      <img src="../images/b2f71c4475324f34aad0a5dfd4ccc2ae5d683571 (1).png"  class="bottle" alt="Perfume Bottle" />
+
+      <!-- Ingredients Around Circle -->
+      <div class="ingredient" style="--i:0;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (7).png" alt=""><span>Rose</span></div>
+      <div class="ingredient" style="--i:1;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (8).png" alt=""><span>Lily</span></div>
+      <div class="ingredient" style="--i:2;"><img src="../images/one.png" alt=""><span>Jasmine</span></div>
+      <div class="ingredient" style="--i:3;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (4).png" alt=""><span>Vanilla</span></div>
+      <div class="ingredient" style="--i:4;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (6).png" alt=""><span>Lavender</span></div>
+      <div class="ingredient" style="--i:5;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (7).png" alt=""><span>Rose</span></div>
+      <div class="ingredient" style="--i:6;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (5).png" alt=""><span>Tulip</span></div>
+      <div class="ingredient" style="--i:7;"><img src="../images/2016ed226d71f96aa68722db3dfd6952e8170102 (5).png" alt=""><span>Tulip</span></div>
+      <div class="ingredient" style="--i:8;"><img src="../images/one.png" alt=""><span>Lily</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- next -->
+    <section class="product-section">
+        <!-- Left Side: Image Viewer -->
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../images/a206a3992f8dd3b83e58b96d68af3ba37d448aff.png" alt="Main Perfume" id="main-product-image" />
+                <div class="carousel-controls">
+                    <button id="prev-btn">&lt;</button>
+                    <button id="next-btn">&gt;</button>
+                </div>
+            </div>
+
+            <div class="thumbnails " style="justify-content: space-between;display:flex;position:relative;">
+                <img src="../images/o (1).jpg" alt="Perfume Bottle" class="active-thumbnail" data-full="../images/o (1).jpg">
+                <img src="../images/o (2).jpg" alt="Rose" data-full="../images/o (2).jpg">
+                <img src="../images/a8c8f067b9a3a2d097a82012c1bf9fd831a81dcb.jpg" alt="Lily" data-full="../images/a8c8f067b9a3a2d097a82012c1bf9fd831a81dcb.jpg">
+                <img src="../images/o (4).jpg" alt="Jasmine" data-full="../images/o (4).jpg">
+              
+            </div>
+            <br>
+            <Br>
+            <div class="thumbnails" style="justify-content: space-between;display:flex;position:relative;">
+                 <img src="../images/o (1).jpg" alt="Perfume Bottle" class="active-thumbnail" data-full="../images/o (1).jpg">
+                <img src="../images/o (2).jpg" alt="Rose" data-full="../images/o (2).jpg">
+                <img src="../images/a8c8f067b9a3a2d097a82012c1bf9fd831a81dcb.jpg" alt="Lily" data-full="../images/a8c8f067b9a3a2d097a82012c1bf9fd831a81dcb.jpg">
+                <img src="../images/o (4).jpg" alt="Jasmine" data-full="../images/o (4).jpg">
+              
+            </div>
+        </div>
+
+        <!-- Right Side: Product Info -->
+        <div class="product-info">
+            <h2>GTG Perfumes</h2>
+            <p class="stars" style="color:#007b3e">★★★★★ 4.7 <span>(1994 reviews)</span></p>
+            <p class="description small">
+                Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance. 
+                Crafted for those who seek to elevate their essence with purpose and sophistication.
+            </p>
+
+            <div class="plan-header">Most Popular</div>
+
+            <!-- Single Subscription -->
+            <div class="plan-box active" id="single-sub">
+                <label class="radio-option">
+                    <input type="radio" name="plan" value="single" checked />
+                    <span>Single Subscription</span>
+                    <span class="price">$99.99 <del>$146</del></span>
+                </label>
+
+                <div class="fragrance-options">
+                    <p>Choose a Fragrance:</p>
+                    <br>
+                   <div class="d-flex" style="justify-content: space-between;">
+                   
+                    <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                       <label style="font-size: 12px;"><input style="color:#002d17" type="radio" name="single-fragrance" value="original" checked> Original</label>
+                       <img style="width: 100px;height: 100px;" src="../images/a.png" alt="">
+                    </div>
+                   <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                     <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="day"> Day</label>
+                      <img style="width: 100px;height: 100px;" src="../images/kk.png" alt="">
+                   </div>
+                  <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                      <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="share"> Share</label>
+                       <img style="width: 100px;height: 100px;" src="../images/d.png" alt="">
+                  </div>
+                   </div>
+                </div>
+
+                <div class="delivery-options">
+                    <p>What's Included:</p>
+                    <div class="delivery-box">
+                        <div class="every">
+                            <p>Every 30 Days</p>
+                               <img style="width: 200px;height: 200px;" src="../images/a.png" alt="">
+                            
+                        </div>
+                        <div class="once">
+                            <p>One Time <span>(Free)</span></p>
+                            <div style="display: flex;">
+                                <img style="width: 100px;height: 100px;" src="../images/a.png" alt="">
+                                 <img style="width: 100px;height: 100px;" src="../images/kk.png" alt="">
+                                  <img style="width: 100px;height: 100px;" src="../images/d.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="perks">
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;1 Bottle Shipped Monthly</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;2 Free Samples For Original, Lily And Rose Fragrances</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;50% OFF Shipping</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;Pause Or Cancel Anytime After 3 Months Minimum</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;28 Day Money Back Guarantee*</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Double Subscription -->
+            <div class="plan-box" id="double-sub">
+                <label class="radio-option">
+                    <input type="radio" name="plan" value="double" />
+                    <span>Double Subscription</span>
+                    <span class="price">$169.99 <del>$246</del></span>
+                </label>
+
+                <div class="fragrance-options">
+                    <p>Choose Fragrance 1:</p>
+                    <br>
+                    <div class="d-flex" style="justify-content: space-between;">
+                   
+                    <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                       <label style="font-size: 12px;"><input style="color:#002d17" type="radio" name="single-fragrance" value="original" checked> Original</label>
+                       <img style="width: 100px;height: 100px;" src="../images/a.png" alt="">
+                    </div>
+                   <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                     <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="day"> Day</label>
+                      <img style="width: 100px;height: 100px;" src="../images/kk.png" alt="">
+                   </div>
+                  <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                      <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="share"> Share</label>
+                       <img style="width: 100px;height: 100px;" src="../images/d.png" alt="">
+                  </div>
+                   </div>
+
+                    <p style="margin-top: 15px;">Choose Fragrance 2:</p>
+                    <br>
+                    <div class="d-flex" style="justify-content: space-between;">
+                   
+                    <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                       <label style="font-size: 12px;"><input style="color:#002d17" type="radio" name="single-fragrance" value="original" checked> Original</label>
+                       <img style="width: 100px;height: 100px;" src="../images/a.png" alt="">
+                    </div>
+                   <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                     <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="day"> Day</label>
+                      <img style="width: 100px;height: 100px;" src="../images/kk.png" alt="">
+                   </div>
+                  <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                      <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="share"> Share</label>
+                       <img style="width: 100px;height: 100px;" src="../images/d.png" alt="">
+                  </div>
+                   </div>
+                </div>
+
+                <div class="delivery-options">
+                    <p>What's Included:</p>
+                    <div class="delivery-box">
+                        <div class="every">
+                            <p>Every 30 Days</p>
+<img style="width: 200px;height: 200px;" src="../images/a.png" alt="">
+
+                        </div>
+                        <div class="once">
+                            <p>One Time <span>(Free)</span></p>
+                               <div style="display: flex;">
+                                <img style="width: 100px;height: 100px;" src="../images/a.png" alt="">
+                                 <img style="width: 100px;height: 100px;" src="../images/kk.png" alt="">
+                                  <img style="width: 100px;height: 100px;" src="../images/d.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="perks">
+                          <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;1 Bottle Shipped Monthly</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;2 Free Samples For Original, Lily And Rose Fragrances</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;50% OFF Shipping</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;Pause Or Cancel Anytime After 3 Months Minimum</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;28 Day Money Back Guarantee*</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Try Once -->
+            <div class="plan-box" id="try-once">
+                <label class="radio-option">
+                    <input type="radio" name="plan" value="try-once" />
+                    <span>Try Once</span>
+                    <span class="price">$129.99 <del>$146</del></span>
+                </label>
+
+                <div class="fragrance-options">
+                    <p>Choose a Fragrance:</p>
+                    <br>
+                    <div class="d-flex" style="justify-content: space-between;">
+                   
+                    <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                       <label style="font-size: 12px;"><input style="color:#002d17" type="radio" name="single-fragrance" value="original" checked> Original</label>
+                       <img style="width: 100px;height: 100px;" src="../images/a.png" alt="">
+                    </div>
+                   <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                     <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="day"> Day</label>
+                      <img style="width: 100px;height: 100px;" src="../images/kk.png" alt="">
+                   </div>
+                  <div style="background: rgba(128, 128, 128, 0.05);">
+                      <sub style="float:right;"><span style="background: #002d17;color:white;padding:10px;border-radius:10px 0px 10px 0px;font-size:10px;margin:10px">Best-Seller</span></sub>
+                      <label  style="font-size: 12px;"><input type="radio" name="single-fragrance" value="share"> Share</label>
+                       <img style="width: 100px;height: 100px;" src="../images/d.png" alt="">
+                  </div>
+                   </div>
+                </div>
+
+                <div class="delivery-options">
+                    <ul class="perks">
+                           <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;1 Bottle Shipped Monthly</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;2 Free Samples For Original, Lily And Rose Fragrances</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;50% OFF Shipping</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;Pause Or Cancel Anytime After 3 Months Minimum</li>
+                        <li style="font-size: 12px;"><i class="fa-solid fa-check" style="color: #007a3d;"></i>&emsp;28 Day Money Back Guarantee*</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="add-to-cart" id="add-to-cart-btn">Add to Cart - Single Subscription: Original ($99.99)</button>
+        </div>
+    </section>
+<!-- The ultimate Fragrance -->
+    <div class="ultimate row">
+        <div class="col-sm-5" style="">
+        <img style="width: 400px;height:700px" src="../images/06076418a4a13c3d862e417b337e7d3e2c8f48b3.png" alt="" >
+
+
+        </div>
+        <div class="col-sm-7">
+            <h5 style="color: white;">The Ultimate Fragrance</h5>
+            <br>
+            <small style=" color: white; font-weight: 100; font-family: 'Roboto', sans-serif;">GTG SPECIAL EDITION</small>
+            <br>
+            <br>
+            <div class="row" >
+                <div  style="background: #fafaf821;border-radius:10px;margin-right:32px;width:280px;height:246px;padding:24px 20px">
+                    <i class="fa-solid fa-leaf text-white"></i><BR><br>
+                    <h6 style="color: white;font-size: 14px;">Lorem ipsum</h6>
+                    <p style="font-size: 12px;color: white; font-family: 'Roboto', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                </div>
+                <div  style="background: #fafaf821;border-radius:10px;margin-right:32px;width:280px;height:246px;padding:24px 20px">
+                    <i class="fa-solid fa-truck text-white"></i><br><br>
+                    <h6 style="color: white;font-size: 14px;">Lorem ipsum</h6>
+                    <p style="font-size: 12px;color: white; font-family: 'Roboto', sans-serif;">dolor sit amet consectetur, adipisicing elit. Harum distinctio illum saepe? Tempore autem repudiandae illo delectus facilis voluptatibus</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="" style="background: #fafaf821;border-radius:10px;margin-right:32px;width:280px;height:246px;padding:24px 20px">
+                    <i class="fa-solid fa-globe text-white"></i><br><br>
+                    <h6 style="color: white;font-size: 14px;">Lorem ipsum</h6>
+                    <p style="font-size: 12px;color: white; font-family: 'Roboto', sans-serif;">dolor sit amet consectetur, adipisicing elit. Harum distinctio illum saepe? Tempore autem repudiandae illo delectus facilis voluptatibus, </p>
+                </div>
+                <div  class="" style="background: #fafaf821;border-radius:10px;margin-right:32px;width:280px;height:246px;padding:24px 20px">
+                    <i class="fa-solid fa-heart text-white"></i><br><br>
+                      <h6 style="color: white;font-size: 14px;">Lorem ipsum</h6>
+                    <p style="font-size: 12px;color: white; font-family: 'Roboto', sans-serif;">dolor sit amet consectetur, adipisicing elit. Harum distinctio illum saepe? Tempore autem repudiandae illo delectus facilis voluptatibus, </p>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <button style="border-radius:50px;background: white;outline:none;color:black;border:none;width:271.54px;height:52.27px;font-size:12px;">Try Velvet Whisper Today</button>
+        </div>
+    </div>
+
+    <div class="sectione row">
+        <div class="col-sm-6">
+            <small style="color: white;">SUBSCRIPTION</small>
+<p style="font-size: 41.43px; color: white; font-weight: 100; font-family: 'Roboto', sans-serif;">
+  Subscribe & save <span style="font-weight: 100;">20%</span> on<br> every perfume
+</p>
+            <div class="" >
+                <div class="d-flex gap-1">
+                    <button style="background: white;outline:none;border:solid 1px white;font-size:14px;padding:12px 24px;border-radius:30px;">Lorem Ipsum</button>
+                    <button style="background: white;outline:none;border:solid 1px white;font-size:14px;padding:12px 24px;border-radius:30px;">Lorem Ipsum</button>
+                    <button style="background: white;outline:none;border:solid 1px white;font-size:14px;padding:12px 24px;border-radius:30px;">Lorem Ipsum</button>
+                </div>
+              <br>
+                  <div class="d-flex gap-1">
+                    <button style="background: white;outline:none;border:solid 1px white;font-size:14px;padding:12px 24px;border-radius:30px;">Lorem Ipsum</button>
+                    <button style="background: white;outline:none;border:solid 1px white;font-size:14px;padding:12px 24px;border-radius:30px;">Lorem Ipsum</button>
+                    <button style="background: white;outline:none;border:solid 1px white;font-size:14px;padding:12px 24px;border-radius:30px;">Lorem Ipsum</button>
+                </div>
+                <br>
+                <br>
+                  <button style="background:linear-gradient(#032E15,#016630);outline:none;border:solid 1px rgb(14, 50, 11);font-size:14px;padding:12px 24px;border-radius:30px;width:200.27px;height:53.14px;color:white">Subscribe Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- sectiont -->
+     <div class="oo">
+     <div class="collection-container">
+    <h2>Our Collection</h2>
+
+    <div class="accordion">
+      <div class="accordion-item active">
+        <div class="accordion-header">
+          Signature Scents
+          <span class="accordion-icon"></span>
+        </div>
+        <div class="accordion-content">
+          Discover our curated line of signature perfumes, designed to become your daily companion.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          Signature Scents
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          A fresh set of scents designed to match your lifestyle and elegance.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          Signature Scents
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          Explore long-lasting fragrances with floral and earthy undertones.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          Signature Scents
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          Premium scents handpicked to bring out your best aura and vibe.
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Add this inside the body where you want the image slider -->
+<div id="perfumeCarousel" class="carousel slide" data-bs-ride="carousel" style="width:40%; border-radius: 12px; overflow: hidden;height: 511px;">
+  
+  <!-- Carousel indicators (dots) -->
+  <div class="carousel-indicators" >
+    <button type="button"  data-bs-target="#perfumeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#perfumeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <!-- Carousel images -->
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img style="width:100%;" src="../images/60a31355ad8d95a8a0b6a7d8d5cbfff286a9dbe8.jpg"  alt="Image 1">
+    </div>
+
+  </div>
+
+  <!-- Carousel controls (arrows) -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#perfumeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.3); border-radius: 50%;"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#perfumeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.3); border-radius: 50%;"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+     </div>
+
+
+     <!-- count -->
+      <section class="percentage-section">
+  <div class="percentage-box">
+    <h2 class="counter" data-target="84" style="color: white;">0%</h2>
+    <p style="font-family: 'Roboto', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+  <div class="percentage-box">
+    <h2 class="counter" data-target="78" style="color: white;">0%</h2>
+    <p style="font-family: 'Roboto', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+  <div class="percentage-box">
+    <h2 class="counter" data-target="89" style="color: white;">0%</h2>
+    <p style="font-family: 'Roboto', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+  <div class="percentage-box">
+    <h2 class="counter" data-target="90" style="color: white;">0%</h2>
+    <p style="font-family: 'Roboto', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+</section>
+<!-- table -->
+ <section class="comparison-section">
+  <h2>Why GTG is the <span>#1 Choice</span></h2>
+
+  <div class="comparison-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Qualities</th>
+          <th class="highlight">
+            <img src="../images/o (1).jpg" alt="GTG">
+            <div>GTG</div>
+          </th>
+          <th>
+            <img src="../images/o (2).jpg" alt="Arose">
+            <div>Arose</div>
+          </th>
+          <th>
+            <img src="../images/o (3).jpg" alt="Bella">
+            <div>Bella</div>
+          </th>
+          <th>
+            <img src="../images/o (4).jpg" alt="Daisies">
+            <div>Daisies</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Potency Concentration</td>
+          <td class="highlight">10x</td>
+          <td>1x</td>
+          <td>1x</td>
+          <td>10x</td>
+        </tr>
+        <tr>
+          <td>Longevity</td>
+          <td class="highlight"><span class="tick">✔</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="tick">✔</span></td>
+        </tr>
+        <tr>
+          <td>Sillage</td>
+          <td class="highlight"><span class="tick">✔</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="tick">✔</span></td>
+        </tr>
+        <tr>
+          <td>Bottle Design Score</td>
+          <td class="highlight">9</td>
+          <td>5</td>
+          <td>6</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Blend and Harmony</td>
+          <td class="highlight"><span class="tick">✔</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="cross">✖</span></td>
+        </tr>
+        <tr>
+          <td>Skin Compatibility</td>
+          <td class="highlight"><span class="tick">✔</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="tick">✔</span></td>
+        </tr>
+        <tr>
+          <td>Scent Profile</td>
+          <td class="highlight"><span class="tick">✔</span></td>
+          <td><span class="tick">✔</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="tick">✔</span></td>
+        </tr>
+        <tr>
+          <td>Price vs. Quality</td>
+          <td class="highlight"><span class="tick">✔</span></td>
+          <td><span class="tick">✔</span></td>
+          <td><span class="cross">✖</span></td>
+          <td><span class="tick">✔</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cta-button">
+      <button>Try It Risk-Free</button>
+    </div>
+  </div>
+</section>
+<!-- sectionv -->
+ <div style="margin: 40px;">
+<div class="play-container">
+  <img style="border-radius: 20px;" src="../images/a5927538caba0e9e3a82ed6677b4e8a3b0aa12f9.jpg" alt="Preview Image">
+  <div class="play-icon">&#9658;</div>
+</div>
+<div class="row m-5">
+  <div class="col-sm-6">
+    <h4>From the Founders</h4>
+ <div class="cta-button">
+      <button>About Us</button>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <p style="font-family: 'Roboto', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod </p>
+  </div>
+</div>
+
+ </div>
+
+ <!-- review -->
+  <div class=" p-5" style="background: #F0FDF4;">
+  <h2 class="fw-bold text-success">What our customers are saying</h2>
+  <p class="text-muted">Real people, real reviews.</p>
+
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class=" p-4 ">
+              <div class="text-success mb-2">★★★★★</div>
+              <p class="small">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="User">
+                <div>
+                  <div class="fw-bold small">Name Surname</div>
+                  <div class="text-muted small">Position, Company name</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the below col-md-4 block for other testimonials -->
+          <div class="col-md-4">
+            <div class=" p-4 ">
+              <div class="text-success mb-2">★★★★★</div>
+              <p class="small">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="User">
+                <div>
+                  <div class="fw-bold small">Name Surname</div>
+                  <div class="text-muted small">Position, Company name</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Third card -->
+          <div class="col-md-4">
+            <div class=" p-4 ">
+              <div class="text-success mb-2">★★★★★</div>
+              <p class="small">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="User">
+                <div>
+                  <div class="fw-bold small">Name Surname</div>
+                  <div class="text-muted small">Position, Company name</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat .carousel-item for more slides if needed -->
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+    </button>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators mt-4">
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+</div>
+<!-- FAQ -->
+<div class="container my-5">
+  <div class="row">
+    <!-- Left side: heading and button -->
+    <div class="col-md-4 mb-4">
+      <h2 class="fw-bold">FAQs</h2>
+      <p>If you have any question that isn’t answered in our FAQs, we’d love to hear from you!</p>
+      <button class="faq-button">Get In Touch</button>
+    </div>
+
+    <!-- Right side: Accordion -->
+    <div class="col-md-8">
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+              Lorem ipsum dolor sit amet?
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              This is the answer to the first question. You can put any content here.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+              Lorem ipsum dolor sit amet?
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Answer to question 2.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+              Lorem ipsum dolor sit amet?
+            </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Answer to question 3.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+              Lorem ipsum dolor sit amet?
+            </button>
+          </h2>
+          <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Answer to question 4.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+              Lorem ipsum dolor sit amet?
+            </button>
+          </h2>
+          <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Answer to question 5.
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-all-link">See All FAQ’s →</a>
+    </div>
+  </div>
+</div>
+<!-- section laste second -->
+ <div class="container my-5">
+  <div class="subscribe-section">
+    <h2>Lorem ipsum dolor sit amet?</h2>
+    <p>Lorem ipsum dolor sit amet?</p>
+    <form class="subscribe-form d-flex flex-column align-items-center">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- footer -->
+
+<div class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-2">
+        <div class="logo">GTG</div>
+        <ul class="list-unstyled">
+          <li><a href="#"><small>Home</small></a></li>
+          <li><a href="#"><small>Shop</small></a></li>
+          <li><a href="#"><small>Fragrances</small></a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2">
+        <h6>&nbsp;</h6>
+        <ul class="list-unstyled">
+          <li><a href="#"><small>About Us</small></a></li>
+          <li><a href="#"><small>Blog</small></a></li>
+          <li><a href="#"><small>Contact</small></a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6>&nbsp;</h6>
+        <ul class="list-unstyled social">
+          <li><a href="#"><i class="fab fa-facebook-f"></i> <small>Facebook</small></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> <small>Instagram</small></a></li>
+          <li><a href="#"><i class="fab fa-x-twitter"></i> <small>X</small></a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5">
+        <h6 class="fw-bold mb-3">Join our newsletter to stay up to date on features and releases.</h6>
+        <form class="d-flex mb-2">
+          <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+          <button type="submit" class="btn-subscribe">Subscribe</button>
+        </form>
+        <small>
+          By subscribing you agree to with our <a href="#" class="text-decoration-underline">Privacy Policy</a> and provide consent to receive updates from our company.
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let started = false;
+
+  const startCount = (entry) => {
+    if (entry.isIntersecting && !started) {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+
+        const update = () => {
+          const increment = Math.ceil(target / 40);
+          if (count < target) {
+            count += increment;
+            counter.textContent = `${Math.min(count, target)}%`;
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = `${target}%`;
+          }
+        };
+        update();
+      });
+      started = true;
+    }
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => startCount(entry));
+  }, {
+    threshold: 0.5
+  });
+
+  counters.forEach(counter => observer.observe(counter));
+</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Image Gallery Functionality
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnails = document.querySelectorAll('.thumbnails img');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            let currentImageIndex = 0;
+            const images = Array.from(thumbnails).map(img => img.dataset.full);
+            
+            // Update main image
+            function updateMainImage(index) {
+                mainImage.src = images[index];
+                thumbnails.forEach((thumb, i) => {
+                    if (i === index) {
+                        thumb.classList.add('active-thumbnail');
+                    } else {
+                        thumb.classList.remove('active-thumbnail');
+                    }
+                });
+                currentImageIndex = index;
+            }
+            
+            // Thumbnail click event
+            thumbnails.forEach((thumb, index) => {
+                thumb.addEventListener('click', () => {
+                    updateMainImage(index);
+                });
+            });
+            
+            // Previous button click
+            prevBtn.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                updateMainImage(currentImageIndex);
+            });
+            
+            // Next button click
+            nextBtn.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateMainImage(currentImageIndex);
+            });
+            
+            // Auto-rotate images every 5 seconds (optional)
+            // setInterval(() => {
+            //     currentImageIndex = (currentImageIndex + 1) % images.length;
+            //     updateMainImage(currentImageIndex);
+            // }, 5000);
+            
+            // Plan Selection Functionality
+            const planBoxes = document.querySelectorAll('.plan-box');
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            
+            planBoxes.forEach(box => {
+                const radioOption = box.querySelector('.radio-option');
+                
+                radioOption.addEventListener('click', function() {
+                    // Remove active class from all boxes
+                    planBoxes.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked box
+                    box.classList.add('active');
+                    
+                    // Check the radio input
+                    const radioInput = box.querySelector('input[type="radio"]');
+                    radioInput.checked = true;
+                    
+                    // Update add to cart button
+                    updateAddToCartButton();
+                });
+            });
+            
+            // Fragrance selection change
+            document.querySelectorAll('input[type="radio"][name^="single"], input[type="radio"][name^="double"], input[type="radio"][name^="try"]').forEach(radio => {
+                radio.addEventListener('change', updateAddToCartButton);
+            });
+            
+            // Update Add to Cart button text
+            function updateAddToCartButton() {
+                const selectedPlan = document.querySelector('input[name="plan"]:checked').value;
+                let planName = '';
+                let price = '';
+                let fragrance = '';
+                
+                if (selectedPlan === 'single') {
+                    planName = 'Single Subscription';
+                    price = '$99.99';
+                    fragrance = document.querySelector('input[name="single-fragrance"]:checked').value;
+                } else if (selectedPlan === 'double') {
+                    planName = 'Double Subscription';
+                    price = '$169.99';
+                    const frag1 = document.querySelector('input[name="double-fragrance1"]:checked').value;
+                    const frag2 = document.querySelector('input[name="double-fragrance2"]:checked').value;
+                    fragrance = `${frag1} & ${frag2}`;
+                } else if (selectedPlan === 'try-once') {
+                    planName = 'Try Once';
+                    price = '$129.99';
+                    fragrance = document.querySelector('input[name="try-fragrance"]:checked').value;
+                }
+                
+                addToCartBtn.textContent = `Add to Cart - ${planName}: ${fragrance.charAt(0).toUpperCase() + fragrance.slice(1)} (${price})`;
+            }
+            
+            // Add to cart button click
+            addToCartBtn.addEventListener('click', function() {
+                const selectedPlan = document.querySelector('input[name="plan"]:checked').value;
+                let planName = '';
+                let price = '';
+                let fragrance = '';
+                
+                if (selectedPlan === 'single') {
+                    planName = 'Single Subscription';
+                    price = '99.99';
+                    fragrance = document.querySelector('input[name="single-fragrance"]:checked').value;
+                } else if (selectedPlan === 'double') {
+                    planName = 'Double Subscription';
+                    price = '169.99';
+                    const frag1 = document.querySelector('input[name="double-fragrance1"]:checked').value;
+                    const frag2 = document.querySelector('input[name="double-fragrance2"]:checked').value;
+                    fragrance = `${frag1},${frag2}`;
+                } else if (selectedPlan === 'try-once') {
+                    planName = 'Try Once';
+                    price = '129.99';
+                    fragrance = document.querySelector('input[name="try-fragrance"]:checked').value;
+                }
+                
+                // Here you would typically send this data to your server
+                console.log('Adding to cart:', {
+                    plan: planName,
+                    fragrance: fragrance,
+                    price: price,
+                    image: mainImage.src
+                });
+                
+                // Show confirmation (you can replace with your own UI)
+                alert(`${planName} (${fragrance}) added to cart!`);
+            });
+        });
+    </script>
+
+<!-- Font Awesome CDN (include in <head> of your HTML if not already added) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    // Search box toggle
+    const searchToggle = document.getElementById('searchToggle');
+    const searchBox = document.getElementById('searchBox');
+    searchToggle.addEventListener('click', () => {
+      searchBox.classList.toggle('active');
+      searchBox.focus();
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+
+ 
+</body>
+</html>
